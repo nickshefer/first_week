@@ -1,0 +1,152 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	padding: 15px 0px;
+	background: #f9f9f9;
+	border-bottom: $divider;
+
+	&_body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 30px;
+	}
+
+	&_logo {
+		display: flex;
+		align-items: center;
+		font-family: $poppins;
+		font-weight: 600;
+		font-size: 21px;
+		line-height: 130%;
+		color: $primary-color;
+		& span {
+			margin-left: 8px;
+		}
+	}
+
+	&_menu {
+		display: flex;
+		flex-grow: 1;
+	}
+
+	&_list {
+		display: flex;
+		gap: 30px;
+		font-family: $inter;
+		font-weight: 500;
+		text-transform: capitalize;
+	}
+
+	&_link {
+		& a {
+			font-size: 17px;
+			color: $text-gray;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+		&__btns {
+			display: none;
+		}
+	}
+
+	&_buttons {
+		display: flex;
+		gap: 10px;
+	}
+
+	&_burger {
+		display: none;
+		cursor: pointer;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		& span,
+		&::before,
+		&::after {
+			display: block;
+			width: 100%;
+			content: '';
+			position: absolute;
+			left: 0;
+			height: 2px;
+			background: $text-gray;
+			transition: $transitionAll;
+		}
+		& span {
+			top: 9px;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		&.active::before {
+			transform: rotate(45deg) translateY(-50%);
+			top: 50%;
+		}
+		&.active span {
+			opacity: 0;
+		}
+		&.active::after {
+			transform: rotate(-45deg) translateY(50%);
+			bottom: 50%;
+		}
+	}
+}
+.header_burger__active:before {
+	opacity: 0;
+}
+
+@media (max-width: $sm) {
+	.header {
+		&_buttons {
+			justify-content: flex-end;
+			flex-grow: 1;
+		}
+		&_menu {
+			padding: 90px 20px 0px 20px;
+			height: 100vh;
+			background: #f4ebff;
+			position: fixed;
+			width: 250px;
+			top: 0;
+			right: -100%;
+			transition: $transitionAll;
+			&.active {
+				right: 0;
+			}
+		}
+		&_list {
+			flex-direction: column;
+			gap: 25px;
+		}
+		&_link {
+			& a {
+				font-size: 30px;
+			}
+		}
+		&_burger {
+			display: block;
+		}
+	}
+}
+
+@media (max-width: 460px) {
+	.header {
+		&_buttons {
+			display: none;
+		}
+		&_link {
+			&__btns {
+				display: flex;
+				gap: 10px;
+			}
+		}
+	}
+}
