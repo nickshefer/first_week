@@ -3,11 +3,13 @@
 // Переменные
 @import './vars.scss';
 
+// Компоненты
 @import './components/layout/header/header';
 @import './components/layout/footer/footer.scss';
 @import './components/UI/button/button.scss';
 @import './components/home/heroSection/heroSection.scss';
 @import './components/home/featuresSection/featuresSection.scss';
+@import './components/home/appSection/appSection.scss';
 body {
 	background: #f9f9f9;
 	font-family: $inter;
@@ -53,14 +55,8 @@ ul {
 .title {
 	font-family: $poppins;
 	font-weight: 600;
-	font-size: 75px;
 	letter-spacing: -0.04em;
 	color: #201f1f;
-}
-@media (max-width: $sm) {
-	.title {
-		font-size: 60px;
-	}
 }
 .text-primary {
 	color: $primary-color;
