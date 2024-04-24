@@ -10,6 +10,9 @@
 @import './components/home/heroSection/heroSection.scss';
 @import './components/home/featuresSection/featuresSection.scss';
 @import './components/home/appSection/appSection.scss';
+@import './components/home/restaurantsSection/resturansSection.scss';
+@import './components/UI/loader/loader.scss';
+@import './components/UI/badge/badge.scss';
 body {
 	background: #f9f9f9;
 	font-family: $inter;

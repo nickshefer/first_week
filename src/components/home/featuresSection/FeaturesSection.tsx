@@ -1,4 +1,4 @@
-import { useResize } from '../../../hooks/UseResize';
+import { useResize } from '../../../hooks/useResize';
 import featureleft1 from '../../../assets/featureLeft1.svg';
 import featureleft2 from '../../../assets/featureLeft2.svg';
 import featureRight1 from '../../../assets/featureRight1.svg';

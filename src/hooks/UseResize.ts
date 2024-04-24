@@ -6,7 +6,7 @@ export const useResize = () => {
 	const [width, setWidth] = useState(window.innerWidth);
 
 	useEffect(() => {
-		const handleResize = e => {
+		const handleResize = (e: globalThis.UIEvent) => {
 			setWidth(e.target.innerWidth);
 		};
 		window.addEventListener('resize', handleResize);
