@@ -13,6 +13,7 @@
 @import './components/home/restaurantsSection/resturansSection.scss';
 @import './components/UI/loader/loader.scss';
 @import './components/UI/badge/badge.scss';
+@import './components/home/dishesSection/dishes.scss';
 body {
 	background: #f9f9f9;
 	font-family: $inter;
@@ -63,4 +64,19 @@ ul {
 }
 .text-primary {
 	color: $primary-color;
+}
+.view-all {
+	display: flex;
+	justify-content: flex-end;
+	font-family: $poppins;
+	font-weight: 500;
+	font-size: 20px;
+	letter-spacing: -0.01em;
+	color: #acadb9;
+	& a {
+		color: #acadb9;
+		&:hover {
+			color: #81828d;
+		}
+	}
 }

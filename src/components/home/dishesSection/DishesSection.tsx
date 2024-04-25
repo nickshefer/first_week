@@ -1,22 +1,24 @@
 import { useEffect, useState } from 'react';
 import Loader from '../../UI/loader/Loader';
-import RestauratsCard from './RestauratsCard';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa6';
+import DishesCard from './DishesCard';
 
-export interface Restaurant {
-	title: string;
+export interface Dish {
+	id: number;
+	name: string;
 	tag: string;
 	rating: number;
+	price: number;
 	delivery_time: number;
 	img_url: string;
 }
 
-export default function RestaurantsSection() {
-	const [data, setData] = useState<Restaurant[]>([]);
+export default function DishesSection() {
+	const [data, setData] = useState<Dish[]>([]);
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		fetch('https://6625022f04457d4aaf9d8f31.mockapi.io/posts')
+		fetch('https://6625022f04457d4aaf9d8f31.mockapi.io/foods')
 			.then(res => res.json())
 			.then(data => {
 				setData(data);
@@ -25,24 +27,22 @@ export default function RestaurantsSection() {
 				setLoading(false);
 			});
 	}, []);
+
 	return (
-		<section className='restaurants'>
+		<section className='dishes'>
 			<div className='container'>
-				<h3 className='restaurants_title'>
-					Our Top <span className='text-primary'>Restaurants</span>
-				</h3>
+				<h2 className='dishes_title'>
+					Our Top <span className='text-primary'>Dishes</span>
+				</h2>
 				{loading ? (
 					<div className='restaurants_loader'>
 						<Loader size={100} />
 					</div>
 				) : (
 					<>
-						<ul className='restaurants_list'>
-							{data.map((item: Restaurant) => (
-								<RestauratsCard
-									key={`${Date.now() * Math.random()}`}
-									item={item}
-								/>
+						<ul className='dishes_list'>
+							{data.map(dish => (
+								<DishesCard key={dish.id} item={dish} />
 							))}
 						</ul>
 						<div className='view-all'>
