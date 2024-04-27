@@ -1,11 +1,7 @@
-Проект развернут с помощью `create-vite@latest --template typescript`
-
 # Главная страница приложения Early
 
-Использовал React, TS, SCSS. Версия node.js - v20.11.0
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Использовал React, TS, SCSS.
+Версия node.js - v20.11.0
 
 ## Приступая к работе
 
@@ -21,22 +17,9 @@ pnpm dev
 bun dev
 ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Описание
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-	// other rules...
-	parserOptions: {
-		ecmaVersion: 'latest',
-		sourceType: 'module',
-		project: ['./tsconfig.json', './tsconfig.node.json'],
-		tsconfigRootDir: __dirname
-	}
-};
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Успел сверстать главную страницу, адаптировать все блоки.
+Возникли проблемы со слайдером, так как торопился не успел сделать как в макете.
+Не успел доверстать и адаптировать модальные окна
+Не успел решить проблему (при открытие модалки на body вешается класс .hidden, а при клике внутри модалки он удаляется)

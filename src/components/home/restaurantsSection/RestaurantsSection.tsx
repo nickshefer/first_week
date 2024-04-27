@@ -27,7 +27,7 @@ export default function RestaurantsSection() {
 	}, []);
 	return (
 		<section className='restaurants'>
-			<div className='container'>
+			<div className='container restaurants_content'>
 				<h3 className='restaurants_title'>
 					Our Top <span className='text-primary'>Restaurants</span>
 				</h3>

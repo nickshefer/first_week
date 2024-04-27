@@ -1,12 +1,7 @@
-import { useResize } from '../../../hooks/useResize';
 import featureleft1 from '../../../assets/featureLeft1.svg';
 import featureleft2 from '../../../assets/featureLeft2.svg';
 import featureRight1 from '../../../assets/featureRight1.svg';
 import featureRight2 from '../../../assets/featureRight2.svg';
-import featureTop1 from '../../../assets/featureTop1.svg';
-import featureTop2 from '../../../assets/featureTop2.svg';
-import featureBottom1 from '../../../assets/featureBottom1.svg';
-import featureBottom2 from '../../../assets/featureBottom2.svg';
 
 type Feature = {
 	digit: string;
@@ -29,7 +24,6 @@ const features: Feature[] = [
 ];
 
 export default function FeaturesSection() {
-	const { isScreenSm } = useResize();
 	return (
 		<section className='features'>
 			<div className='container '>
@@ -41,21 +35,12 @@ export default function FeaturesSection() {
 						</li>
 					))}
 				</ul>
-				{isScreenSm ? (
-					<div className='features_decor'>
-						<img src={featureTop1} alt='#' />
-						<img src={featureTop2} alt='#' />
-						<img src={featureBottom1} alt='#' />
-						<img src={featureBottom2} alt='#' />
-					</div>
-				) : (
-					<div className='features_decor'>
-						<img src={featureleft1} alt='#' />
-						<img src={featureleft2} alt='#' />
-						<img src={featureRight1} alt='#' />
-						<img src={featureRight2} alt='#' />
-					</div>
-				)}
+				<div className='features_decor'>
+					<img src={featureleft1} alt='#' />
+					<img src={featureleft2} alt='#' />
+					<img src={featureRight1} alt='#' />
+					<img src={featureRight2} alt='#' />
+				</div>
 			</div>
 		</section>
 	);

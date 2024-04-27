@@ -14,9 +14,20 @@
 @import './components/UI/loader/loader.scss';
 @import './components/UI/badge/badge.scss';
 @import './components/home/dishesSection/dishes.scss';
+@import './components/home/controlSection/controlSection.scss';
+@import './components/home/reviewsSection/reviewsSection.scss';
+@import './components/home/saleSection/saleSection.scss';
+@import './components/modals/modal.scss';
+
+* {
+	box-sizing: border-box;
+}
 body {
 	background: #f9f9f9;
 	font-family: $inter;
+}
+.hidden {
+	overflow: hidden;
 }
 main {
 	padding-top: 86px;
@@ -46,7 +57,6 @@ button {
 	background: none;
 }
 ul {
-	flex-grow: 1;
 	margin: 0;
 	padding: 0;
 	list-style: none;

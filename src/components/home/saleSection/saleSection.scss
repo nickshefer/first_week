@@ -1,0 +1,94 @@
+.sale {
+	margin-bottom: 160px;
+	&_block {
+		position: relative;
+		border-radius: 14px;
+		padding: 40px 65px;
+		background: url('/src/assets/saleBg.png') center $primary-color;
+		&::after {
+			position: absolute;
+			bottom: -150px;
+			right: 60px;
+			content: '';
+			display: block;
+			width: 274px;
+			height: 276px;
+			background: url('/src/assets/saleDecor.png') center no-repeat;
+			background-size: cover;
+		}
+	}
+
+	&_title {
+		font-family: $poppins;
+		font-weight: 800;
+		font-size: 70px;
+		// text-align: center;
+		color: #fff;
+	}
+	&_btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 4px;
+		cursor: pointer;
+		display: inline-block;
+		padding: 17px 26px;
+		font-family: $inter;
+		font-weight: 700;
+		text-wrap: nowrap;
+		font-size: 17px;
+		color: #f9f9f9;
+		background: #8279c7;
+		border: 2px solid $primary-color;
+		border-radius: 14px;
+		transition: $transitionAll;
+		&:hover {
+			color: $primary-color;
+			background: #f9f9f9;
+		}
+	}
+}
+.sale-form {
+	display: inline-block;
+	position: relative;
+}
+.sale-input {
+	border: none;
+	width: 440px;
+	height: 68px;
+	padding-left: 20px;
+	border-radius: 14px;
+	box-shadow: 0 7px 45px 0 rgba(0, 0, 0, 0.1);
+	font-family: $poppins;
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: 0.03em;
+}
+@media (max-width: 940px) {
+	.sale {
+		&_block {
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
+@media (max-width: 634px) {
+	.sale {
+		margin-bottom: 60px;
+		&_block {
+			padding: 20px 32px;
+		}
+	}
+	.sale-form {
+		display: block;
+	}
+	.sale-input {
+		width: 100%;
+	}
+	.sale_btn {
+		margin-top: 20px;
+		transform: none;
+		position: static;
+	}
+}

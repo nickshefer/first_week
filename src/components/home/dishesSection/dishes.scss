@@ -1,8 +1,10 @@
 .dishes {
 	overflow-x: hidden;
-	padding-top: 100px;
-	padding-bottom: 120px;
-	border-bottom: $divider;
+	&_content {
+		border-bottom: $divider;
+		padding-top: 100px !important;
+		padding-bottom: 120px !important;
+	}
 	&_title {
 		padding: 0px 0px 80px;
 		text-align: center;
@@ -12,6 +14,7 @@
 	}
 
 	&_list {
+		width: 100%;
 		margin-bottom: 65px;
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
@@ -121,8 +124,10 @@
 }
 @media (max-width: $sm) {
 	.dishes {
-		padding-top: 50px;
-		padding-bottom: 60px;
+		&_content {
+			padding-top: 50px !important;
+			padding-bottom: 60px !important;
+		}
 		&_title {
 			padding-bottom: 40px;
 			font-size: 35px;

@@ -30,7 +30,7 @@ export default function DishesSection() {
 
 	return (
 		<section className='dishes'>
-			<div className='container'>
+			<div className='container dishes_content'>
 				<h2 className='dishes_title'>
 					Our Top <span className='text-primary'>Dishes</span>
 				</h2>

@@ -2,6 +2,8 @@ interface ButtonProps {
 	as?: 'a';
 	href?: string;
 	variant?: Variant;
+	className?: string;
+	onClick?: () => void;
 	children: React.ReactNode;
 }
 

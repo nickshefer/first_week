@@ -1,0 +1,161 @@
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 20;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	overflow-y: scroll;
+	&_content {
+		position: relative;
+		display: flex;
+		margin-top: 15px;
+		background: #fff;
+	}
+
+	&_main {
+		padding: 15px 0px 15px 15px;
+		flex: 0 0 55%;
+	}
+
+	&_header {
+		margin-bottom: 90px;
+	}
+	&_middle {
+		max-width: 382px;
+		padding-right: 15px;
+		margin: 0 auto;
+	}
+
+	&_title {
+		margin-bottom: 30px;
+		text-align: center;
+		font-weight: 600;
+		font-size: 35px;
+		letter-spacing: -0.04em;
+		color: #323142;
+	}
+
+	&_buttons {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	&_btn {
+		cursor: pointer;
+		padding-top: 10px;
+		flex: 1 0 47%;
+		background: #f5f5f5;
+		border-radius: 13px;
+		font-size: 26px;
+		color: #323142;
+		transition: $transitionAll;
+		&:hover {
+			background: $primary-color;
+			color: #f5f5f5;
+		}
+	}
+	&_or {
+		margin-top: 20px;
+		text-align: center;
+		font-weight: 500;
+		font-size: 20px;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		color: rgba(0, 90, 100, 0.35);
+	}
+	&_form {
+	}
+
+	&_input {
+		margin-top: 20px;
+		padding: 15px 12px;
+		border: none;
+		width: 100%;
+		display: inline-block;
+		background: #f5f5f5;
+		border-radius: 14px;
+		font-weight: 600;
+		font-size: 16px;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		color: #c2c3cb;
+		&:focus {
+			outline: 2px solid $primary-color;
+			color: $primary-color;
+		}
+	}
+
+	&_forgot-password {
+		margin-top: 10px;
+		text-align: right;
+		& a {
+			font-family: $poppins;
+			font-weight: 400;
+			font-size: 15px;
+			color: #6c5fbc;
+			opacity: 0.7;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	&_submit-btn {
+		margin-top: 20px;
+		width: 100%;
+		padding: 15px 12px;
+		text-align: center;
+		border-radius: 16px;
+		background: $primary-color;
+		font-weight: 600;
+		font-size: 17px;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		color: #f3f5f6;
+	}
+
+	&_question {
+		margin-top: 20px;
+		text-align: center;
+		font-family: $poppins;
+		font-weight: 400;
+		font-size: 18px;
+		letter-spacing: 0.01em;
+		color: #3e3e3e;
+		& a {
+			font-weight: 700;
+			color: $primary-color;
+		}
+	}
+
+	&_footer {
+		padding-right: 15px;
+		margin-top: 90px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&_privacy {
+	}
+
+	&_copyright {
+	}
+
+	&_close {
+		cursor: pointer;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		color: #fff;
+	}
+}
+.modal-decor {
+	padding: 15px 15px 15px 0px;
+	flex: 0 0 45%;
+	background: $primary-color;
+}
+.active {
+	display: block;
+}
